@@ -77,6 +77,18 @@
 			<version>1.2.7</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
+		<!-- In your pom.xml, ensure proper ASM dependencies -->
+<dependency>
+    <groupId>org.ow2.asm</groupId>
+    <artifactId>asm</artifactId>
+    <version>5.0.4</version>
+</dependency>
+<dependency>
+    <groupId>org.ow2.asm</groupId>
+    <artifactId>asm-commons</artifactId>
+    <version>5.0.4</version>
+</dependency>
+		
 	</dependencies>
 
 	<repositories>
