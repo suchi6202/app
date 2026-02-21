@@ -6,7 +6,7 @@
 
 	<groupId>5d0d61e3-be04-45b7-b5c8-9d4fb5ea9bcd</groupId>
 	<artifactId>test_deploy</artifactId>
-	<version>1.0.36</version>
+	<version>1.0.37</version>
 	<packaging>mule-application</packaging>
 
 	<name>test_deploy</name>
