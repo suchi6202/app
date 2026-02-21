@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="132e26b8-d547-4fba-8664-2b8d1edf5521" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="test_deployFlow" doc:id="65be1e32-2ad7-4412-91c2-008d88818204" >
+		<http:listener doc:name="Listener" doc:id="907a850a-fc3f-4fce-aa97-8f826df61a56" config-ref="HTTP_Listener_config" path="/maven"/>
+		<set-payload value="anshuman dasaundhi suchitra bhatt test abc ytrtyerte tddgfdg hgjhgjh yttt uuuuuuuuuu jjjjjjjjjj uuuu yyy888" doc:name="Set Payload" doc:id="76fc2757-ca3a-4497-adb3-769a1dea9793" />
+	</flow>
+</mule>
