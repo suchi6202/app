@@ -6,7 +6,7 @@
 
 	<groupId>5d0d61e3-be04-45b7-b5c8-9d4fb5ea9bcd</groupId>
 	<artifactId>test_deploy</artifactId>
-	<version>1.0.71</version>
+	<version>1.0.72</version>
 	<packaging>mule-application</packaging>
 
 	<name>test_deploy</name>
@@ -25,19 +25,24 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
+				
 			</plugin>
-
-   <plugin>
+<plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.2.5</version> <configuration>
+    <version>3.2.5</version>
+    <configuration>
         <argLine>
+            -Dfile.encoding=UTF-8
             --add-opens java.base/java.lang=ALL-UNNAMED
             --add-opens java.base/java.util=ALL-UNNAMED
             --add-opens java.base/java.lang.reflect=ALL-UNNAMED
+            --add-opens java.base/java.text=ALL-UNNAMED
+            --add-opens java.base/java.time=ALL-UNNAMED
         </argLine>
     </configuration>
 </plugin>
+ 
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -88,16 +93,7 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<!-- In your pom.xml, ensure proper ASM dependencies -->
-<dependency>
-    <groupId>org.ow2.asm</groupId>
-    <artifactId>asm</artifactId>
-    <version>5.0.4</version>
-</dependency>
-<dependency>
-    <groupId>org.ow2.asm</groupId>
-    <artifactId>asm-commons</artifactId>
-    <version>5.0.4</version>
-</dependency>
+
 		
 	</dependencies>
 
