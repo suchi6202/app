@@ -6,7 +6,7 @@
 
 	<groupId>5d0d61e3-be04-45b7-b5c8-9d4fb5ea9bcd</groupId>
 	<artifactId>test_deploy</artifactId>
-	<version>1.0.70</version>
+	<version>1.0.71</version>
 	<packaging>mule-application</packaging>
 
 	<name>test_deploy</name>
@@ -27,7 +27,17 @@
 				<version>3.2.0</version>
 			</plugin>
 
-
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.2.5</version> <configuration>
+        <argLine>
+            --add-opens java.base/java.lang=ALL-UNNAMED
+            --add-opens java.base/java.util=ALL-UNNAMED
+            --add-opens java.base/java.lang.reflect=ALL-UNNAMED
+        </argLine>
+    </configuration>
+</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
